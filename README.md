@@ -57,7 +57,3 @@ Open [`notebooks/yelp_review_sentiment_classification.ipynb`](notebooks/yelp_rev
 - **The model struggles most on "bad" reviews.** Recall on the minority class is only 0.35, meaning most negative reviews get misclassified as positive — the failure mode that would matter most in a real moderation or alerting use case.
 - **The dataset is small and the feature space is narrow.** ~3,000 reviews and an 800-token bag-of-words vocabulary is enough for a proof of concept but limits how much nuance the model can capture.
 - **Possible next steps:** address class imbalance (`class_weight='balanced'`, resampling, or threshold tuning), try TF-IDF weighting and a non-linear model, use k-fold cross-validation instead of a single split, or keep the original 1-5 star scale as an ordinal/multiclass target instead of collapsing to binary.
-
-## License
-
-No license specified. Add one if you plan to share or reuse this project.
